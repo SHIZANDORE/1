@@ -27,22 +27,23 @@
     .mensaje {
       position: absolute;
       top: 20px;
-      left: 40px;   /* ahora se alinea más a la izquierda */
-      text-align: left;
+      left: 50%;                /* centrado horizontal */
+      transform: translateX(-50%);
       font-size: 32px;
       font-weight: bold;
       color: white;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
       font-family: "Comic Sans MS", cursive, sans-serif;
+      text-align: center;
+      white-space: nowrap;      /* evita saltos de línea */
     }
     .submensaje {
       position: absolute;
-      top: 120px;   /* más abajo que antes */
+      top: 80px;  
+      left: 50%;
+      transform: translateX(-50%);
       width: 80%;             
       max-width: 1000px;      
-      margin: 0 auto;         
-      left: 0;
-      right: 0;
       text-align: center;
       font-size: 20px;
       font-style: italic;
@@ -57,7 +58,7 @@
 <body>
   <div class="mensaje">🌻 Bienvenido al campo de girasoles 🌻</div>
   <div class="submensaje">
-    Bueno… No soy de dar, pero para que no te sientas sola 🌼 (Haz Click)
+    Bueno… No soy de hacer esto y menos no soy tu amigo, pero estoy agradecido de que me hayas hablado ese día para unirme a su grupo, feliz primavera (quiero que esto solo lo sepa tú y tu almohada por favor) 🌼 (Haz Click)
   </div>
   <canvas id="canvas"></canvas>
 
