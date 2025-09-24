@@ -10,7 +10,6 @@
       overflow: hidden;
     }
     body {
-      /* Fondo dividido */
       background: linear-gradient(to top, 
         #1e7a1e 25%,   
         #2e8b57 35%,   
@@ -27,38 +26,36 @@
     .mensaje {
       position: absolute;
       top: 20px;
-      left: 50%;                /* centrado horizontal */
-      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
       font-size: 32px;
       font-weight: bold;
       color: white;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
       font-family: "Comic Sans MS", cursive, sans-serif;
-      text-align: center;
-      white-space: nowrap;      /* evita saltos de línea */
     }
     .submensaje {
       position: absolute;
-      top: 80px;  
-      left: 50%;
-      transform: translateX(-50%);
-      width: 80%;             
-      max-width: 1000px;      
+      top: 100px;   /* lo bajé un poco más */
+      width: 80%;  
+      max-width: 1000px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
       text-align: center;
-      font-size: 20px;
+      font-size: 22px;
       font-style: italic;
-      font-weight: normal;
       color: #fff9d9;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
       font-family: "Georgia", serif;
-      line-height: 1.4;
+      line-height: 1.5;
     }
   </style>
 </head>
 <body>
   <div class="mensaje">🌻 Bienvenido al campo de girasoles 🌻</div>
   <div class="submensaje">
-    Bueno… No soy de hacer esto y menos no soy tu amigo, pero estoy agradecido de que me hayas hablado ese día para unirme a su grupo, feliz primavera (quiero que esto solo lo sepa tú y tu almohada por favor) 🌼 (Haz Click)
+    No soy de dar, pero para que no te sientas sola 🌼 (Haz Click)
   </div>
   <canvas id="canvas"></canvas>
 
@@ -68,15 +65,12 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    // Redimensionar
     window.onresize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
     };
 
-    // Dibuja un girasol
     function drawSunflower(x, y, size = 50, petals = 20) {
-      // Tallo
       ctx.beginPath();
       ctx.moveTo(x, y);
       ctx.lineTo(x, y + size * 2);
@@ -87,7 +81,6 @@
       ctx.save();
       ctx.translate(x, y);
 
-      // Pétalos
       for (let i = 0; i < petals; i++) {
         ctx.rotate((2 * Math.PI) / petals);
         ctx.beginPath();
@@ -98,7 +91,6 @@
         ctx.stroke();
       }
 
-      // Centro
       ctx.beginPath();
       ctx.arc(0, 0, size / 3, 0, 2 * Math.PI);
       ctx.fillStyle = "brown";
@@ -107,10 +99,10 @@
       ctx.restore();
     }
 
-    // Plantar con clic
     canvas.addEventListener("click", (e) => {
       drawSunflower(e.clientX, e.clientY, 50);
     });
   </script>
 </body>
 </html>
+
