@@ -26,8 +26,9 @@
     .mensaje {
       position: absolute;
       top: 20px;
-      width: 100%;
-      text-align: center;
+      left: 10%;         /* lo mueve hacia la izquierda */
+      width: 80%;
+      text-align: left;  /* alineado hacia la izquierda */
       font-size: 32px;
       font-weight: bold;
       color: white;
@@ -36,13 +37,13 @@
     }
     .submensaje {
       position: absolute;
-      top: 100px;   /* lo bajé un poco más */
-      width: 80%;  
+      top: 100px;
+      width: 80%;
       max-width: 1000px;
       margin: 0 auto;
       left: 0;
       right: 0;
-      text-align: center;
+      text-align: center;   /* este sí centrado */
       font-size: 22px;
       font-style: italic;
       color: #fff9d9;
@@ -105,4 +106,3 @@
   </script>
 </body>
 </html>
-
