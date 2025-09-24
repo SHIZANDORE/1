@@ -27,21 +27,19 @@
     .mensaje {
       position: absolute;
       top: 20px;
-      width: 100%;
-      text-align: center;
+      left: 40px;   /* ahora se alinea más a la izquierda */
+      text-align: left;
       font-size: 32px;
       font-weight: bold;
       color: white;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-      font-family: "Trebuchet MS", Arial, sans-serif;
-      padding: 0 20px;  /* espacio a los lados */
-      box-sizing: border-box;
+      font-family: "Comic Sans MS", cursive, sans-serif;
     }
     .submensaje {
       position: absolute;
-      top: 70px;  
+      top: 120px;   /* más abajo que antes */
       width: 80%;             
-      max-width: 900px;       
+      max-width: 1000px;      
       margin: 0 auto;         
       left: 0;
       right: 0;
@@ -53,8 +51,6 @@
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
       font-family: "Georgia", serif;
       line-height: 1.4;
-      padding: 0 20px;  /* más espacio en los bordes */
-      box-sizing: border-box;
     }
   </style>
 </head>
@@ -117,4 +113,3 @@
   </script>
 </body>
 </html>
-
