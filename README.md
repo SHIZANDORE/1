@@ -56,7 +56,7 @@
 <body>
   <div class="mensaje">🌻 Bienvenido al campo de girasoles 🌻</div>
   <div class="submensaje">
-    No soy de dar, pero para que no te sientas sola 🌼 (Haz Click)
+    No soy de dar, pero para que no te sientas espectadora 🌼 (Haz Click)
   </div>
   <canvas id="canvas"></canvas>
 
